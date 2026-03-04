@@ -78,6 +78,50 @@ O sistema irá:
 - Enviar o email para todos os destinatários
 - Exibir o progresso no terminal
 
+## Solução de Problemas
+
+### Erro: "ModuleNotFoundError: No module named 'dotenv'"
+
+Se você receber este erro ao executar o programa, existem duas soluções:
+
+**Opção 1: Executar sem ambiente virtual**
+
+Se o ambiente virtual estiver com problemas, você pode desativá-lo e executar diretamente com o Python do sistema:
+
+```bash
+deactivate
+python3 main.py
+```
+
+**Opção 2: Recriar o ambiente virtual**
+
+Se preferir usar um ambiente virtual, recrie-o corretamente:
+
+```bash
+# Instalar o pacote python3-venv (se necessário)
+sudo apt install python3.10-venv
+
+# Remover o ambiente virtual antigo
+rm -rf .venv
+
+# Criar um novo ambiente virtual
+python3 -m venv .venv
+
+# Ativar o ambiente virtual
+source .venv/bin/activate
+
+# Instalar as dependências
+pip install -r requirements.txt
+```
+
+**Opção 3: Instalar diretamente do PyPI**
+
+Se houver problemas com índices privados, instale usando o PyPI público:
+
+```bash
+pip install --index-url https://pypi.org/simple python-dotenv==1.0.0
+```
+
 ## Estrutura do Projeto
 
 ```
