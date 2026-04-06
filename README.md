@@ -42,30 +42,15 @@ destinatario3@example.com
 
 1. **Clone o repositório** (se ainda não o fez)
 
-2. **Crie e ative um ambiente virtual** (recomendado):
+2. **Instale as dependências**:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate  # No Linux/Mac
-# ou
-.venv\Scripts\activate     # No Windows
+pip3 install -r requirements.txt
 ```
 
-3. **Instale as dependências**:
+3. **Configure o arquivo `.env`** conforme descrito acima
 
-```bash
-pip install -r requirements.txt
-```
-
-4. **Configure o arquivo .env** conforme descrito acima
-
-5. **Execute o programa**:
-
-```bash
-python main.py
-```
-
-ou
+4. **Execute o programa**:
 
 ```bash
 python3 main.py
